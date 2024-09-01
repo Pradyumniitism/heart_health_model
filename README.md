@@ -49,11 +49,3 @@ A Plotly bar plot is included to visualize the test accuracies across different 
 ## Contributing
 
 Feel free to submit issues or pull requests if you want to contribute to this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to adjust the README to better fit your needs or preferences!
