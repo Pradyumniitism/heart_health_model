@@ -1,3 +1,4 @@
+
 # Heart Disease Prediction Project
 
 ## Overview
@@ -11,7 +12,28 @@ This project aims to predict heart disease using various machine learning algori
 - **Data Visualization**: A pair plot and correlation heatmap are created to explore relationships between features and the target variable.
 - **Feature Engineering**: Strong features are selected based on correlation with the target variable, and multicollinearity is addressed by dropping highly correlated features.
 - **Data Preprocessing**: Categorical features are converted to dummy variables, and all features are scaled using `StandardScaler`.
-- **Model Training**: Various classifiers, including Logistic Regression, SVM, Gradient Boosting, and Naive Bayes, are trained using `GridSearchCV` to find the best hyperparameters.
+- **Model Training**: Various classifiers are trained using `GridSearchCV` to find the best hyperparameters. The classifiers and their hyperparameters are as follows:
+
+    - **Logistic Regression**:
+      - `penalty`: The regularization method used ('l1' or 'l2').
+      - `C`: The regularization strength (values: 0.01, 0.1, 1, 10, 100).
+      - `solver`: The optimization algorithm ('liblinear' or 'saga').
+      - `max_iter`: The maximum number of iterations for the solver (values: 100, 200, 300).
+
+    - **Support Vector Machine (SVM)**:
+      - `C`: The regularization parameter (values: 1, 10, 100).
+      - `kernel`: The kernel type ('linear' or 'rbf').
+      - `gamma`: The kernel coefficient (values: 'scale' or 'auto').
+      - `degree`: The degree of the polynomial kernel function (values: 2, 3, 4).
+
+    - **Gradient Boosting**:
+      - `n_estimators`: The number of boosting stages to be run (values: 50, 100, 200).
+      - `learning_rate`: The learning rate (values: 0.01, 0.1, 0.2).
+      - `max_depth`: The maximum depth of the individual trees (values: 3, 4, 5).
+
+    - **Naive Bayes**:
+      - `var_smoothing`: The smoothing parameter to prevent zero probabilities (values: 1e-9, 1e-8, 1e-7).
+
 - **Model Evaluation**: The best models are evaluated on the test set, and their performance is compared using accuracy scores and classification reports.
 - **Visualization**: A bar plot with hover functionality is created using Plotly to compare the test accuracies across different models.
 
